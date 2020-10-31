@@ -1,0 +1,15 @@
+[alias]
+	s = status
+	changes = diff --staged
+	c = checkout
+	quicklog = log --oneline --max-count=10
+	q = quicklog
+	b = branch
+	com = commit -m
+	r = rebase
+	sync = !git c master && git pull && git c dev/palka && git b bkp && git r master && git push --force && git c master && git r dev/palka && git push && git b -D bkp && git c dev/palka
+[user]
+	email = peter.palka@gmail.com
+	name = peter.palka
+[core]
+	editor = vim
