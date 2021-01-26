@@ -7,7 +7,9 @@
 	b = branch
 	com = commit -m
 	r = rebase
-	sync = !git c master && git pull && git c dev/palka && git b bkp && git r master && git push --force && git c master && git r dev/palka && git push && git b -D bkp && git c dev/palka
+  sync = !git c master && git pull && git c dev/palka && git b bkp && git r master && git push --force && git b -D bkp
+  sap = !git c master && git pull && git c dev/palka && git b bkp && git r master && git push --force && git c master && git r dev/palka && git push && git b -D bkp && git c dev/palka
+  standup = log --author 'palka' --pretty=format:'%cn %cD %s'
 [user]
 	email = peter.palka@gmail.com
 	name = peter.palka

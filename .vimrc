@@ -14,6 +14,9 @@ call plug#end() "vim plug configuration completion
 :map <C-n> :Files<CR>
 :map <C-f> :Rg<CR>
 :map <C-l> :NERDTreeFind<CR>
+:map <C-Right> :tabn<CR>
+:map <C-Left> :tabp<CR>
+:map <C-B> :ALEGoToDefinition<CR>
 
 "AUTOCOMPLETE
 filetype plugin on
