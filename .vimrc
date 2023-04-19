@@ -1,3 +1,5 @@
+let g:coc_disable_startup_warning = 1 " remove after updating vim
+
 call plug#begin('~/.vim/plugged') "vim plug configuration begin
 
 Plug 'scrooloose/nerdtree' "file tree browser tool
@@ -9,6 +11,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'tpope/vim-fugitive' "vim git integration
 Plug 'airblade/vim-gitgutter' "show git status on line in signcolumn
 Plug 'morhetz/gruvbox' "theme gruvbox
+Plug 'vim-autoformat/vim-autoformat' "autoformatting
 
 call plug#end() "vim plug configuration completion
 
@@ -19,7 +22,8 @@ call plug#end() "vim plug configuration completion
 :map <C-Right> :tabn<CR>
 :map <C-Left> :tabp<CR>
 :map <C-o> :ALEGoToDefinition<CR>
-:map <C-k> :ALEHover<CR>
+:map <C-k> :Autoformat<CR>
+:map <C-h> :CocCommand eslint.executeAutofix<CR>
 :map <C-i> :ALEFindReferences<CR>
 :map <C-p> :ALESymbolSearch<CR>
 :map <C-j> :ALECodeAction<CR>
@@ -47,5 +51,7 @@ set signcolumn=yes
 set background=dark
 colorscheme gruvbox
 
-let g:coc_global_extensions = [ 'coc-tsserver' ]
+let g:coc_global_extensions = [ 'coc-tsserver', 'coc-json', 'coc-git', 'coc-angular', 'coc-css', 'coc-eslint', 'coc-html', 'coc-svg' ]
+
+let g:ale_fixers = { 'javascript': ['eslint'] }
 
