@@ -16,6 +16,7 @@ Plug 'vim-autoformat/vim-autoformat' "autoformatting
 call plug#end() "vim plug configuration completion
 
 :map <C-e> :NERDTreeToggle<CR>
+:map <C-a> :Gwrite<CR>
 :map <C-n> :Files<CR>
 :map <C-f> :Rg<CR>
 :map <C-l> :NERDTreeFind<CR>
@@ -33,6 +34,7 @@ call plug#end() "vim plug configuration completion
 " CTRL-w T OPEN CURRENT FILE IN A NEW TAB
 
 :nnoremap <C-r> :%s/<C-r><C-w>/<C-r><C-w>/g "rename all occurences
+:nnoremap gp :silent %!npx prettier --stdin-filepath %<CR>
 
 "AUTOCOMPLETE
 filetype plugin on
@@ -55,3 +57,5 @@ let g:coc_global_extensions = [ 'coc-tsserver', 'coc-json', 'coc-git', 'coc-angu
 
 let g:ale_fixers = { 'javascript': ['eslint'] }
 
+set visualbell
+set t_vb=
