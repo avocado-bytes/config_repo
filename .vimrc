@@ -11,6 +11,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'tpope/vim-fugitive' "vim git integration
 Plug 'airblade/vim-gitgutter' "show git status on line in signcolumn
 Plug 'morhetz/gruvbox' "theme gruvbox
+Plug 'rafi/awesome-vim-colorschemes' "themes (lucius - multiple available)
 Plug 'vim-autoformat/vim-autoformat' "autoformatting
 
 call plug#end() "vim plug configuration completion
@@ -35,6 +36,13 @@ call plug#end() "vim plug configuration completion
 
 :nnoremap <C-r> :%s/<C-r><C-w>/<C-r><C-w>/g "rename all occurences
 :nnoremap gp :silent %!npx prettier --stdin-filepath %<CR>
+:nnoremap <silent> <C-b> :call CocActionAsync('doHover')<CR>
+
+" GIT DIFF GUIDE
+" :Gdiffsplit
+" gp (push to the other file)
+" go (pull from the other file)
+" thank me later
 
 "AUTOCOMPLETE
 filetype plugin on
@@ -50,8 +58,10 @@ set number
 set signcolumn=yes
 
 "DEFAULT THEME SET
-set background=dark
-colorscheme gruvbox
+" colorscheme  gruvbox "dark
+" colorscheme  lucius "light (https://vimcolorschemes.com/rafi/awesome-vim-colorschemes)
+set background=light
+colorscheme lucius
 
 let g:coc_global_extensions = [ 'coc-tsserver', 'coc-json', 'coc-git', 'coc-angular', 'coc-css', 'coc-eslint', 'coc-html', 'coc-svg' ]
 
