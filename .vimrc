@@ -58,10 +58,11 @@ set number
 set signcolumn=yes
 
 "DEFAULT THEME SET
-" colorscheme  gruvbox "dark
+set background=dark
+colorscheme  gruvbox "dark
 " colorscheme  lucius "light (https://vimcolorschemes.com/rafi/awesome-vim-colorschemes)
-set background=light
-colorscheme lucius
+" set background=light
+" colorscheme lucius
 
 let g:coc_global_extensions = [ 'coc-tsserver', 'coc-json', 'coc-git', 'coc-angular', 'coc-css', 'coc-eslint', 'coc-html', 'coc-svg' ]
 
