@@ -2,7 +2,6 @@ let g:coc_disable_startup_warning = 1 " remove after updating vim
 
 call plug#begin('~/.vim/plugged') "vim plug configuration begin
 
-
 Plug 'scrooloose/nerdtree' "file tree browser tool
 Plug 'sheerun/vim-polyglot' "syntax highlighting tool
 Plug 'dense-analysis/ale' "navigation
@@ -16,7 +15,6 @@ Plug 'rafi/awesome-vim-colorschemes' "themes (lucius - multiple available)
 Plug 'vim-autoformat/vim-autoformat' "autoformatting
 Plug 'OmniSharp/omnisharp-vim' " C# unity intellisense
 Plug 'habamax/vim-godot' " Godot game engine support
-
 
 call plug#end() "vim plug configuration completion
 
@@ -77,3 +75,15 @@ let g:OmniSharp_selector_ui = 'fzf'    " Use fzf
 
 set visualbell
 set t_vb=
+
+"
+"CocConfig for godot
+"{
+"    "languageserver": {
+"        "godot": {
+"            "host": "127.0.0.1",
+"            "filetypes": ["gdscript"],
+"            "port": 6005
+"        }
+"    }
+"}
