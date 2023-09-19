@@ -2,6 +2,7 @@ let g:coc_disable_startup_warning = 1 " remove after updating vim
 
 call plug#begin('~/.vim/plugged') "vim plug configuration begin
 
+
 Plug 'scrooloose/nerdtree' "file tree browser tool
 Plug 'sheerun/vim-polyglot' "syntax highlighting tool
 Plug 'dense-analysis/ale' "navigation
@@ -13,6 +14,9 @@ Plug 'airblade/vim-gitgutter' "show git status on line in signcolumn
 Plug 'morhetz/gruvbox' "theme gruvbox
 Plug 'rafi/awesome-vim-colorschemes' "themes (lucius - multiple available)
 Plug 'vim-autoformat/vim-autoformat' "autoformatting
+Plug 'OmniSharp/omnisharp-vim' " C# unity intellisense
+Plug 'habamax/vim-godot' " Godot game engine support
+
 
 call plug#end() "vim plug configuration completion
 
@@ -64,9 +68,12 @@ colorscheme  gruvbox "dark
 " set background=light
 " colorscheme lucius
 
-let g:coc_global_extensions = [ 'coc-tsserver', 'coc-json', 'coc-git', 'coc-angular', 'coc-css', 'coc-eslint', 'coc-html', 'coc-svg' ]
+let g:coc_global_extensions = [ 'coc-tsserver', 'coc-json', 'coc-git', 'coc-angular', 'coc-css', 'coc-eslint', 'coc-html', 'coc-svg', 'coc-clangd' ]
 
 let g:ale_fixers = { 'javascript': ['eslint'] }
+
+let g:ale_linters = { 'cs': ['OmniSharp'] }
+let g:OmniSharp_selector_ui = 'fzf'    " Use fzf
 
 set visualbell
 set t_vb=
