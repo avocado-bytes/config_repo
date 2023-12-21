@@ -76,6 +76,8 @@ let g:OmniSharp_selector_ui = 'fzf'    " Use fzf
 set visualbell
 set t_vb=
 
+let g:godot_executable = '/home/avocado/godot/Godot_v4.1.1-stable_linux.x86_64'
+
 "
 "CocConfig for godot
 "{
